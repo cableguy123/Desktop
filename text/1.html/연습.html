@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    html {
+      font-family: sans-serif;
+
+    }
+    body {
+    width:50%;
+  max-width: 800px;
+min-width: 480px;
+margin:auto;
+}
+.lastResult {
+color:white;
+padding:30px;}
+
+    </style>
+  </head>
+  <body>
+
+
+
+
+
+    <script>
+    // 1과 100 수중 무작위로선택,10번의 기회안에 그 숫자를 맞춰야된다 각 순마다
+    //틀렸는지 안틀렸는지 알려줘야되고 (if) 틀렸다면 큰지 작은지 포함 else if 또한 이전에 써냈던번호도
+    //게임은 플레이어가 맞추던지 기회를 모두 소진하면 끝남
+    // 게임을 끝나면 플레이어가 다시 게임을 할것인지 문제됌
+     var randomNumber = Math.floor(Math.random() * 10) + 1; // 1~100 +1
+
+     var guesses = document.querySelector('.guesses');
+     var lastResult = document.querySelector('.lastResult');
+     var lowOrHi = document.querySelector('.lowOrHi');
+
+     var guessField = document.querySelector('.guessField');
+     var guessSubmit = document.querySelector('.guessSubmit');
+     var guessCount = 1 ;
+     var resetButton ;
+     function checkNum() {
+       var userNum = Number(guesses.value); // Number() 메소드
+       }
+       if(guessCount === 1)  {
+         guess.textContext = 'Previous guesses:';
+
+       } // 게임이 첫판인지 아닌지 판단하는 if
+       guesses.textContext += userNum + '';
+       else if(userNum === randomNumber)  {
+         lastResult.Context = 'good';
+         lastResult.style.color = 'green';
+         lowOrHi = '';
+         setGameOver(); //게임을 더할지 말지 판단
+
+       }
+       if (guessCount === 10 )  {
+         lastResult.Context = 'Game Over';
+         lastResult.style.color = 'red';
+         setGameOver();
+       } else  {
+         lastResult.Context = 'Wrong';
+         lastResult.style.color = 'red';
+         if(userNum < randomNumber) {
+           lowOrHi.Context = "it too low";
+         }
+         else if (userNum > randomNumber) {
+         lowOrHi.Context = 'it too high';}
+       }
+        guessCount++;
+        guessField.value = '';
+        guessField.focus();
+
+
+          }
+
+          guessSubmit.addEventListener('click',checkNum);
+        function setGameOver() {
+          guessField.disabled = true;
+          guessSubmit.disabled = true; // disabled속성 : 작동되지않도록
+          resetButton = document.createElement('button'); // createElement()
+          resetButton.textContext = 'Start New Game';
+          document.body.appendChild(resetButton);
+          resetButton.addEventListener('click'.resetGame);
+        }
+        function resetGame() {
+          guessCount = 1;
+          var resetParas = document.querySelector('.resultParas p');
+          for(var i = 0; i<resetParas.length; i++) {
+            resultParas[i].textContext = '';
+          }
+          resetButton.parentNode.removeChild(resetButton);
+          guessField.disabled = true;
+          guessSubmit.disabled = true;
+          guessField.value = '';
+          guessField.focus();
+          lastResult.style.backgroundColor = 'white';
+          randomNumber = Math.floor(Math.random() * 100) + 1;
+        }
+
+
+
+
+    </script>
+  </body>
+</html>

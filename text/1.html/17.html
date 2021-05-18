@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script>
+    var customName = document.getElementById('customName');
+    var randomize = document.getElementById('.randomize');
+    var story = document.getElementById('.story');
+    function randomValueFromArray(Array)  {
+      var random = Math.floor(Math.random() * array.length);
+      return array[random];
+
+    }
+    let storyText = 'It was 94 fahrenheit outside,so :insertX: went for a walk
+    . when they got to :insertY:,ther stared in horror for a few moments,
+    the :insertZ:,Bob saw the whole thing, but was not supprised - :insertx:
+    weighs 300 pounds,and it was a hot day.';
+
+    var insertX = ['Willy the Gobiln','Big Daddy','Father Christmas'];
+    var insertY = ['the soup kitchen','Disneyland','the White House'];
+    var insertZ = ['spontaneously combusted','melted into a puddle on the sidewalk','turned into a slug'];
+
+  randomize.addEventListener('click',result); // addEventListener 
+  function result() {
+    var newStory = storyText;
+    var xItem = randomValueFromArray(insertX);
+    var yItem = randomValueFromArray(insertY);
+    var zItem = randomValueFromArray(insertZ);
+    newStory.replace(':insertX:',xItem);
+    newStory.replace(':insertY:',yItem);
+    newStory.replace(':insertZ:',zItem);
+
+  }
+  if(customName.value !== '') {
+    var name = customName.value;
+    newStory = newStory.replace('Bob',name);
+  }
+  if(document.getElementById('uk').checked) {
+    var weight = Math.round(300*0.0714286) + 'stone';
+    var temperature = Math.round((94-32) * 5 / 9) + 'centigrade';
+    newStory = newStory.replace('94 fahrenheit',temperature);
+    newStory = newStory.replace('300 pounds',weight);
+
+  }
+  story.textContent = newStory;
+  story.style.visibility = 'visible';
+}
+
+
+
+
+
+
+
+
+      </script>
+  </body>
+</html>

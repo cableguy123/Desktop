@@ -1,0 +1,29 @@
+meta name="referrer" 문서에서 시작하는 요청의 http referer헤더 
+content 값  no-referrer referer헤더를 전송하지않습니다
+origin 문서의 출처를 전송합니다
+no-referrer-when-downgrade 기본 동작 방식 높은 보안수준을 가진 경우 전체url 전송하고 취약한경우 전송 안함
+orgin-when-cross-origin 매개변수를제거한 전체 url 전송 교차출처요청에는 출처만 전송 동일출처요청에만
+same-origin 동일 출처 요청에 매개변수 제거한 전체 url 전송 교차출처 요청에는 정보 x
+strict-origin 목적지가 현재 문서와 동일하거나 더높은 보안수준을 경우 출처 전송 취약하면 X
+strict-origin-when-cross-origin  현재 문서와 동일하거나 더 높은보안수준을 가진경우 자신의 출처를 전송
+unsafe-URL 동일 출처와 교차 출처 모두에 대해서 전채 URl 전송
+touch-action: 브라우저에게 맡길 터치 액션 지정 
+속성 값은 touch-action:
+ex) auto , none(브라우저가 모든 터치 이벤트를 무시하도록 설정) , pan-x,pan-y (특정 축으로 터치를 사용한 스크롤 허용 ),
+pan-left,right,up,down ( 특정 방향으로 터치를 사용한 스크롤 허용) ,pinch-zoom (여러 손가락을 사용한확대)
+manipulation (터치를 사용한 스크롤 ,핀치줌만 허용하고 그외 비표준동작) , pan-y pinch-zoom(동시에 여러값 지정가능)
+
+script nonce: 특정 구체적 element 허용 ex inline script or style elements
+replace(); 
+어떤 패턴에 일치하는 일부 or 모든 부분이 교체된 새로운 문자열을 반환합니다 
+그 패턴은 문자열 string or 정규식 RegExp
+RegExp 객체는 리터럴 표기법과 생성자로 생성
+ex new RegExp ( /ab+c/, 'i') 리터럴
+ex new RegExp('ab+c','i') 생성자
+function apply(); 함수
+ex.
+fun.apply({thisObj[ , araArray]])
+fun은 가져다쓸 메소드
+thisObj 사용될 객체 선택사항
+argArray 함수에 전달될 인수 집합
+apply는 인자 리스트=배열을  전달 call은 인자 하나하나를 

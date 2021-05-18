@@ -1,0 +1,26 @@
+flex-direction: row면 containner 내부에서 왼쪽정렬, 왼쪽에서부터 오른쪽으로
+row-reverse면 오른쪽정렬
+flex-direction이 column이면 
+1
+2
+3
+column-reverse 면 
+3
+2
+1
+flex-wrap는 줄바꿈속성 contanier에 글이 초과될시 
+wrap 는 12345
+       678
+wrap-reverse 는 역순 
+nowrap은 브라우저 너비 초과해도 한줄로 표시
+justify-content-flex-start; /* flex-end,center,space-between,space-around */
+ex ) flex-end 123 
+center 가운데로 123
+flex-end 끝에 123
+space-between 1 ,  2 , 3
+space-around 1 ,2 , 3 여백을 둠 
+justify-content는 수평방향으로 여백을 줌 
+align-item는 수직방향으로 여백을 줌
+align-content는 flex-wrap:wrap속성이 있어야됌 
+align-content : /*flex-end , center , space-between,space-around,stretch */
+아이템을 한줄에 다표시 모새서 다음줄로 넘김이 발생했을때 줄사이에 여백을 결정하는 것

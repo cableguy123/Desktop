@@ -1,0 +1,145 @@
+태그:닫히는 태그 열린 태그
+링크:<a href="링크"></a>
+링크를 새로운 탭에서 열리게 하고싶다 target="_blank"를 씀 (타겟이라는 속성)
+<a href="링크" target="_blank"></a>
+링크를 눌렀을때 그 링크의 설명을 보여줌:title 속성
+<a href="링크" target="_blank title="보충설명"></a>
+a태그: anchor
+
+
+항목 태그:<li> </li> 
+하나의 태그로 묶어주는 태그:<ul> </ul> ordered list의 약자 
+항목 태그에 순서 표시 태그:<ol> </ol> unordered list의 약자
+탭의 제목 태그:<title></title>
+utf-8 전환태그:<meta charset="utf-8">
+본문이 아닌 태그들은 <head> </head>안으로 들어옴 ex.<title>,<meta>
+본문 태그들 <body></body> 안에 들어옴
+이 모든 태그들의 대장 <html></html> 태그
+<!DOCTYPE> 태그:document type declaration의 약자 
+ex.<!DOCTYPE html> 
+
+열리는 태그 열면 닫히는 태그 무조건 하셈
+탭키 = 태그 자동 완성
+meta 태그는 닫히는태그 굳이안필요함 
+ol>li*4 하면 li태그가 한번에 4개생김
+<p> 태그는 단락을 표시함 
+<br> 태그는 줄바꿈 
+<img> 태그는 이미지를 표시함 img태그는 닫을 필요없음 <img src=""> 이미지 크기 조절은 width= 높이는 height alt는 이미지가 깨졌을때 표시해줌 alt는 alternative text 
+title은 이미지 누를때 도움말이 나옴 
+<table> 태그:<td>태그 항목을 하나로 묶어줌 table teta 행은 <tr> 테두리지정 태그 <table border="ex">
+<td>태그를 <th>태그로 바꾸면 글이 더 진해짐
+<tfoot>
+표 병합:수평,수직으로 병합하는법:rowspan="ex" 렬은 colspan="ex"
+form:사용자가 입력한 데이터를 서버로 전송하는것들   <p>아이디 :<input type="text"></p> password라는걸 입력하게되면 땡땡이 나옴 서버태그 <form action="보내야되는주소">
+submit 버튼:<input type="submit"> 
+form태그들:value(사용자가 값을 적지않아도 값을 나타냄) 즉 기본값 , 여러줄 입력받을때는 textarea태그 기본값은 default value
+사용자가 색상을 선택할때 option태그후 <select>태그로 콤보박스 만들수있음 multiple속성은 사용자가 여러가지를 선택할수있음
+radio버튼: <input type="radio"> , 같은이름으로묶으면 하나의 버튼으로만 선택됌 라디오는 네임값이 같은것들끼리만 하나의 버튼으로 선택됌
+같은 그룹의 것들을 여러개 선택할수있는것: <checkbox>,checked라는 속성넣으면 기본값으로 설정됌
+
+-------
+버튼
+hidden field:
+label:상호명을 붙여줌 누구의 label인지 나타내고 싶으면 for 라는것을 씀 <label for="ex">ex</label> :,
+method:데이터를 전송할때(url) get방식,데이터를 숨겨서 보내는 방식 (post) form형식은 method="post"
+form 파일 업로드:파일을 업로드할때 enctype="multipart/upload.php">
+meta 태그:글의 본문을 설명하는 태그
+semantic태그:글의 제목이 되는부분은 <header>태그*대신 기능은 없음,<footer>태그*<a href>태그로 감싸줌 <nav>태그*네비게이션태그 <article>태그*본문태그 ,특정한역할이 애매한것들은 <section>태그
+검색엔진 최적화:www.naver.com/robots.txt,
+
+css
+vertical-align : inline,inline-block 요소에만 적용됌, block요소 <div>에는 이 속성 작동x (baseline,sub,super,
+text-top,text-bottom,middle,top,bottom,길이값,% )
+baseline : ex vertical-align:baseline; 
+ vertical-align:sub ex) sub: 아래로 기준선을 맞춤
+ vertical-align:super ex ) super : 위첨자 기준선에 맞춤
+vertical-align:text-top ex ).
+ vertical-align:text-bottom
+ vertical-align:middle 
+ vertical-align:top
+ 
+
+font: inherit; ex) inherit 부모 요소의 속성값을 속성받음
+margin-block-start, end ex) 기본마진값 셋팅
+margin-inline-start,end ex) inline 속성 
+line-height ex) 줄높이를 정하는 속성 기본값 normal:1.2
+line-height : length ex ) 길이로 줄 높이를 정합니다
+line-height : number ex ) 글자 크기의 몇배인지 줄높이를 정합니다
+line-height : percentage ex ) 글자 크기의 몇%로 줄 높이로 정합니다
+line-height : initial ex ) 기본 값
+
+
+#form input[type="submit"] { 
+ cursor: pointer; (요소 위에 마우스커서가 올라갔을떄 보여줄 모양을 지정합니다 ) pointer,auto
+border-radius (요소 테두리 경계의 꼭짓점을 둥글게 만듭니다) 
+}
+display : flex; (레이아웃 배치 전용기능) 부모 요소 div.container  자식 div.item
+display : flex; / 
+justify-content : center;
+z-index; z축 큰요소가 작은요소를 덮음
+align-items; flex container display 속성 
+box-sizing : 박스의 크기를 화면에 표시함 
+font-weight : bold; 굵은 굵기 
+font-weight: normal 
+font-weight:border;
+:lighter;
+
+justify-content : center; 가로 축 - 중심축
+ex) flex-start ( default ) 요소들을 컨테이너의 읜쪽으로 정렬
+ex flex-end : 컨테이너의 우측으로 정렬
+space-beteen : 요소들 사이에 동일한 간격을 둡니다
+space-around : 요소들 주위에 동일한 간격을 둡니다
+space-evenly : firefox only 
+ 
+flex-direction : column; 세로로 세움 flex 속성 flex 써야됌
+
+
+p { color : red;  }
+color : property
+red : property value 
+color : red = declaration 선언 
+p : selector 선택자 
+
+
+div 요소는 block 
+block 요소
+
+<div>,
+<h1> <h6>
+<P> <form> <header> <footer> <section> 
+ div { 
+
+}
+
+
+inline 요소 
+<span> 
+<a>
+<img>
+ span { 
+ex.display:inline 
+}
+
+display:none; + script
+display:none + none;
+visibility : hidden =
+postion 속성 태그를 어떻게 위치 시킬것인지
+position:static; 기본값,자동으로 배치되며 위치를 임의로 설정해줄수 없음
+position:fixed; 항상 문서 최 좌측상단을 기준으로 좌표를 고정합니다
+postion:relative 원래있던 위치를 기준으로 좌표를 지정
+// : absolute; 절대 좌표와 함께 위치를 지정해줄수있습니다.
+ihherit:부모 태그의 속성값을상속받음
+! position absolute,fixed 설정시 block태그 특징 사라짐
+
+,
+
+
+ 
+
+
+
+
+
+
+
+

@@ -1,0 +1,100 @@
+body {
+  line-height: 1;
+}
+.container{
+  display: flex;
+  flex-flow: row wrap; /* flex-direction과 flex-wrap의 조합 */
+  justify-content: space-between;
+
+  }
+.header-son2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: normal;
+  justify-content: flex-end;
+  align-items: center;
+  }
+  .header-son1 {
+    width: 33%;
+  }
+  .header-son {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: normal;
+    justify-content: center;
+    align-items: normal;
+    margin-right: 5px;
+
+  }
+
+  span {
+    text-align: center;
+  }
+  .welcome-header {
+    width: 100px;
+    box-sizing: border-box;
+    display: flex;
+    font-weight: bold;
+    font-size: 30px;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color:green;
+    position: relative;
+    margin-top:30px;
+  }
+
+  .welcome-header_title {
+    color:green;
+    text-align: center;
+
+  }
+  h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start:0.67em;
+    margin-block-end:0.67em;
+    margin-inline-start:0px;
+    margin-inline-end:0px;
+
+  }
+  .welcome-header_text {
+    font-size:17px;
+    opacity: 0.7;
+    margin-top: 40px;
+    font-weight: normal;
+    color:black;
+}
+#indel {
+  display: flex;
+  flex-direction: column;
+  margin:80px 30px;
+}
+#indel input  {
+  padding: 15px 0px;
+  border: none;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+#indel input:not([type="submit"]) {
+  border-bottom: 1px solid grey;
+  transition: border-color 0.3s;
+  ease-in-out;
+  transition-property: border-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
+#indel input[type="submit"] {
+  background-color: green;
+  cursor: pointer;
+  border-radius: 5px;
+  color:white;
+  }
+  #indel a {
+    text-align: center;
+    text-decoration: none;
+    font-size:12px;
+    color:inherit;
+  }

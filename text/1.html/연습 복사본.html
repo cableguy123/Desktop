@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    p {
+     display: block;
+     background-color: yellow;
+     color: black;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="customname">Enter custom name  :</label>
+      <input type="text" id="customname" >
+    </div>
+    <div>
+      <label for="US">US</label>
+      <input type="radio" checked name="ukus" value="US">
+      <label for="UK">UK</label>
+      <input type="radio" name="ukus" value="UK">
+    </div>
+    <div>
+      <button class="randomize">Generate random story </button>
+    </div>
+    <p class="story"></p>
+
+
+
+    <script>
+    var customname = document.getElementById('customname');
+    var randomize = document.getElementsByClassName('randomize');
+    var story = document.getElementsByClassName('story');
+
+    function randomValueFromArray(Array) {
+      var storyText = {"It was 94 fahrenheit outside","so","Bob"}
+      var insertX = {"Willy the Gobiln","Big Daddy",
+      "FAther Christmas" };
+      var insertY = {"the soup kitchen","Disneyland","the White House" };
+      var insertZ = {"spontaneously combusted","melted into a puddle on the walk","turned into a slug and crawled" };
+    }
+
+    randomize.addEventListener('click',result);
+    function result() {
+      var newStory = randomValueFromArray(xItem,yItem,zItem);
+      }
+      if (name)  {
+        randomValueFromArray.storyText.Bob;
+      }
+      if(US == checked) {
+
+      }
+
+
+    </script>
+  </body>
+</html>
